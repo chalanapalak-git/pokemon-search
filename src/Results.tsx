@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {buildResultList} from "@coveo/headless";
 import {engine} from "./engine";
 
@@ -34,7 +34,7 @@ export function Results() {
         >
           {/* Pokemon Image */}
           <img
-            src={result.raw.pokemon_image}
+            src={result.raw.pokemon_image as string}
             alt={result.title}
             width="80"
             style={{marginRight: "15px"}}
@@ -43,8 +43,8 @@ export function Results() {
           {/* Pokemon Info */}
           <div>
             <strong>{result.title}</strong>
-            <div>Type: {result.raw.pokemon_type}</div>
-            <div>Generation: {result.raw.pokemon_generation}</div>
+            <div>Type: {result.raw.pokemon_type as string}</div>
+            <div>Generation: {result.raw.pokemon_generation as string}</div>
           </div>
         </div>
       ))}

@@ -1,10 +1,9 @@
-
+import {useEffect} from "react";
 import {SearchBox} from "./SearchBox";
 import {TypeFacet} from "./TypeFacet";
 import {GenerationFacet} from "./GenerationFacet";
 import {Results} from "./Results";
 import {engine} from "./engine";
-import {useEffect} from "react";
 
 function App() {
   useEffect(() => {
